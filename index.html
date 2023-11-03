@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculating machine</title>
+    <!-- css linked -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- heder section start -->
+    <header>
+      <h1>calculating machine</h1>
+    </header>
+    <!-- heder section end -->
+
+    <hr />
+    <!-- main section start -->
+
+    <section class="main">
+      <table class="calculator" id="calcu">
+        <tr>
+          <td colspan="3">
+            <input type="text" id="result" placeholder="0" />
+          </td>
+          <td>
+            <input
+              id="c"
+              type="button"
+              onclick="clearResult()"
+              value="c"
+              readonly
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="button" onclick="displayvalue('1')" value="1" /></td>
+          <td><input type="button" onclick="displayvalue('2')" value="2" /></td>
+          <td><input type="button" onclick="displayvalue('3')" value="3" /></td>
+          <td>
+            <input id="ce" type="button" onclick="removelast()" value="←" />
+          </td>
+        </tr>
+        <tr>
+          <td><input type="button" onclick="displayvalue('4')" value="4" /></td>
+          <td><input type="button" onclick="displayvalue('5')" value="5" /></td>
+          <td><input type="button" onclick="displayvalue('6')" value="6" /></td>
+          <td><input type="button" onclick="displayvalue('+')" value="+" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" onclick="displayvalue('7')" value="7" /></td>
+          <td><input type="button" onclick="displayvalue('8')" value="8" /></td>
+          <td><input type="button" onclick="displayvalue('9')" value="9" /></td>
+          <td><input type="button" onclick="displayvalue('-')" value="-" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" onclick="displayvalue('0')" value="0" /></td>
+          <td>
+            <input type="button" onclick="displayvalue('00')" value="00" />
+          </td>
+          <td><input type="button" onclick="displayvalue('.')" value="." /></td>
+          <td><input type="button" onclick="displayvalue('*')" value="*" /></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <input type="button" onclick="calculate()" value="=" />
+          </td>
+          <td><input type="button" onclick="displayvalue('/')" value="/" /></td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- main section end -->
+
+    <!-- js script link -->
+    <script src="./main.js"></script>
+  </body>
+</html>
